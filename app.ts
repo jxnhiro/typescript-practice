@@ -26,10 +26,15 @@ function checkStringType(num1: any, num2: any): boolean {
   return typeof num1 === "string" && typeof num2 === "string" ? true : false;
 }
 
+function fetchProperties(object: { num: number; date: Date }): string {
+  return object.num + " " + object.date;
+}
+
 addButton.addEventListener("click", () => {
   const num1: string = firstNumberDOM.value;
   const num2: string = secondNumberDOM.value;
 
   const result: number | string = add(num1, num2);
   console.log(result);
+  console.log(fetchProperties({ num: 1, date: new Date() }));
 });

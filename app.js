@@ -19,9 +19,13 @@ function checkNumberType(num1, num2) {
 function checkStringType(num1, num2) {
     return typeof num1 === "string" && typeof num2 === "string" ? true : false;
 }
+function fetchProperties(object) {
+    return object.num + " " + object.date;
+}
 addButton.addEventListener("click", () => {
     const num1 = firstNumberDOM.value;
     const num2 = secondNumberDOM.value;
     const result = add(num1, num2);
     console.log(result);
+    console.log(fetchProperties({ num: 1, date: new Date() }));
 });
