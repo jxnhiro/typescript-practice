@@ -3,10 +3,12 @@ const firstNumberDOM = document.getElementById("number1");
 const secondNumberDOM = document.getElementById("number2");
 const addButton = document.querySelector("button");
 function add(num1, num2) {
-    if (checkNumberType(num1, num2)) {
+    const numbers = checkNumberType(num1, num2);
+    const strings = checkStringType(num1, num2);
+    if (numbers) {
         return +num1 + +num2;
     }
-    if (checkStringType(num1, num2)) {
+    if (strings) {
         return num1 + " " + num2;
     }
     return +num1 + +num2;
