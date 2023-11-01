@@ -44,4 +44,12 @@ addButton.addEventListener("click", () => {
   console.log(result);
   console.log(fetchProperties({ num: 1, date: new Date() }));
   console.log(numberArray, stringArray);
+
+  const promiseTest: Promise<String> = new Promise((resolve, reject) => {
+    resolve("Hello");
+  });
+
+  promiseTest.then((resolveData) => {
+    console.log(resolveData);
+  });
 });
