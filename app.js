@@ -2,6 +2,8 @@
 const firstNumberDOM = document.getElementById("number1");
 const secondNumberDOM = document.getElementById("number2");
 const addButton = document.querySelector("button");
+const numberArray = [];
+const stringArray = [];
 function add(num1, num2) {
     const numbers = checkNumberType(num1, num2);
     const strings = checkStringType(num1, num2);
@@ -26,6 +28,9 @@ addButton.addEventListener("click", () => {
     const num1 = firstNumberDOM.value;
     const num2 = secondNumberDOM.value;
     const result = add(num1, num2);
+    numberArray.push(result);
+    stringArray.push(result);
     console.log(result);
     console.log(fetchProperties({ num: 1, date: new Date() }));
+    console.log(numberArray, stringArray);
 });
