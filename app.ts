@@ -6,7 +6,9 @@ const addButton = document.querySelector("button") as HTMLButtonElement;
 const numberArray: number[] = [];
 const stringArray: string[] = [];
 
-function add(num1: number | string, num2: number | string): number | string {
+type NumberString = number | string;
+
+function add(num1: NumberString, num2: NumberString): NumberString {
   const numbers = checkNumberType(num1, num2);
   const strings = checkStringType(num1, num2);
 

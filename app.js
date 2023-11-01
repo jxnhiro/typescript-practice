@@ -28,8 +28,6 @@ addButton.addEventListener("click", () => {
     const num1 = firstNumberDOM.value;
     const num2 = secondNumberDOM.value;
     const result = add(num1, num2);
-    numberArray.push(result);
-    stringArray.push(result);
     console.log(result);
     console.log(fetchProperties({ num: 1, date: new Date() }));
     console.log(numberArray, stringArray);
